@@ -420,10 +420,9 @@
         document.getElementById("staticrypt-form").addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            const password = document.getElementById("staticrypt-password").value,
-                isRememberChecked = document.getElementById("staticrypt-remember").checked;
+            const password = document.getElementById("staticrypt-password").value;
 
-            const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
+            const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, true);
 
             if (!isSuccessful) {
                 setError(templateError);
