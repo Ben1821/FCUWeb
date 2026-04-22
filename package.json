@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "encrypt:index": "staticrypt .staticrypt-src/index.html -d . -t staticrypt-template.html --config .staticrypt.json --short --remember false --template-title \"114學年度交通安全教育訪視及輔導\" --template-button \"進入網站\" --template-placeholder \"請輸入密碼\" --template-error \"密碼錯誤，請再試一次。\" --template-instructions \"本網站內容僅供受邀檢視，請輸入密碼後進入。\""
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+.staticrypt-src/
+.DS_Store
+
