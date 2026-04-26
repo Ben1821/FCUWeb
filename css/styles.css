@@ -13059,6 +13059,11 @@ header.masthead .post-heading .meta a {
   object-fit: cover;
 }
 
+.content-carousel--fit .carousel-item img {
+  object-fit: contain;
+  background: #fff;
+}
+
 .carousel-item-link {
   display: block;
   position: relative;
@@ -13286,6 +13291,12 @@ header.masthead .post-heading .meta a {
   background: #fff;
 }
 
+.feature-image--home-fit {
+  height: 24rem;
+  object-fit: contain;
+  background: #fff;
+}
+
 .feature-image-link:hover .feature-image,
 .feature-image-link:focus .feature-image {
   transform: translateY(-4px);
@@ -13409,6 +13420,10 @@ header.masthead .post-heading .meta a {
 
   .feature-image--home-banner {
     height: auto;
+  }
+
+  .feature-image--home-fit {
+    height: 18rem;
   }
 
   .feature-part h2 {
