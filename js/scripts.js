@@ -133,33 +133,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const pdfLinks = document.querySelectorAll('[data-pdf-target]');
-    pdfLinks.forEach((link) => {
-        link.addEventListener('click', async (event) => {
-            event.preventDefault();
-
-            const pdfTarget = link.getAttribute('data-pdf-target');
-            const pdfName = link.getAttribute('data-pdf-name') || 'PDF';
-
-            if (!pdfTarget) {
-                return;
-            }
-
-            try {
-                const response = await fetch(pdfTarget, {
-                    method: 'HEAD',
-                    cache: 'no-store',
-                });
-
-                if (response.ok) {
-                    window.open(pdfTarget, '_blank', 'noopener');
-                    return;
-                }
-            } catch (error) {
-                // Fall through to the user-facing message below when the file is not ready yet.
-            }
-
-            window.alert('尚未找到 ' + pdfName + '。請先將 PDF 放到 assets/pdf/ 資料夾中，再重新點擊此圖片。');
-        });
-    });
 });
